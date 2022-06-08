@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#62AFEC"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTextSecondPassed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/second_passed"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTimer"
+        app:layout_constraintStart_toStartOf="@+id/tvTimer"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/start"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPause"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPause"
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/active"
+        android:text="@string/pause"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintStart_toEndOf="@+id/btnStart" />
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/reset"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPause" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
